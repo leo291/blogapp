@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <h1 class="display-7">Seja bem-vindo Leonardo!</h1>
+  <p class="lead">Trabalhando...</p>
+   <p>Usando um JUMBOTRON.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Crie uma conta</a>
+  </p>
+</div>
+<hr>
+
+<h3>Postagens recentes</h3>
+
+{{#each postagens}}
+	<div class="card bg-info text-white mt-1">
+			<div class="card-body card-success">
+		
+			<h4>{{titulo}}</h4>	
+			<p> {{descricao}}</p>
+			<a href="/postagem/{{slug}}"><button class="btn btn-primary">leia mais</button></a>
+			<hr>
+			<small>{{categoria.nome}}</small></br>
+			<small>{{date}}</small><br>
+	
+		</div>
+	</div>
+	
+{{else}}
+	<P>Nenhuma postagem registrada</P>
+{{/each}}
