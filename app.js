@@ -33,8 +33,8 @@ const db = require("./config/db")
 	next();
 })
 	//body PArser
-		app.use(bodyParser.urlencoded({extended: true}))
-		app.use(bodyParser.json())
+	//	app.use(bodyParser.urlencoded({extended: true}))
+	//	app.use(bodyParser.json())
 	//Handlebars
 	app.engine('handlebars', handlebars({defaultlayout: 'main'}))
 	app.set('view engine', 'handlebars')
