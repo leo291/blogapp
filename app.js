@@ -23,7 +23,7 @@ const db = require("./config/db")
 	 	resave: true,
 	 	saveUninitialized: true
 	 }))
-//	 app.use(passport.initialize())
+	 app.use(passport.initialize())
 	 app.use(passport.session()) //muito importante que fique nessa ordem
 	 app.use(flash())
 	 //Middleware
