@@ -127,7 +127,7 @@ app.use("/admin",admin)
 app.use("/usuarios", usuarios)
 //outros
 
-const Port = process.env.port  ||  8081
-app.listen(Port, ()=>{
-	console.log("Servidor ativo")
-})
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () =>{
+  console.log("coco");
+});
