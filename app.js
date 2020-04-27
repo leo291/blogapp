@@ -24,8 +24,8 @@ const db = require("./config/db")
 	 	saveUninitialized: true
 	 }))
 //	 app.use(passport.initialize())
-	// app.use(passport.session()) //muito importante que fique nessa ordem
-	// app.use(flash())
+	 app.use(passport.session()) //muito importante que fique nessa ordem
+	 app.use(flash())
 	 //Middleware
 	 app.use((req,res,next) =>{
 	res.locals.success_msg = req.flash("success_msg")
@@ -33,8 +33,8 @@ const db = require("./config/db")
 	next();
 })
 	//body PArser
-	//	app.use(bodyParser.urlencoded({extended: true}))
-	//	app.use(bodyParser.json())
+		app.use(bodyParser.urlencoded({extended: true}))
+		app.use(bodyParser.json())
 	//Handlebars
 	app.engine('handlebars', handlebars({defaultlayout: 'main'}))
 	app.set('view engine', 'handlebars')
