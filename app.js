@@ -23,9 +23,9 @@ const db = require("./config/db")
 	 	resave: true,
 	 	saveUninitialized: true
 	 }))
-	 app.use(passport.initialize())
-	 app.use(passport.session()) //muito importante que fique nessa ordem
-	 app.use(flash())
+//	 app.use(passport.initialize())
+	// app.use(passport.session()) //muito importante que fique nessa ordem
+	// app.use(flash())
 	 //Middleware
 	 app.use((req,res,next) =>{
 	res.locals.success_msg = req.flash("success_msg")
