@@ -2,9 +2,9 @@ if(process.env.NODE_ENV == "production"){
 
 	module.exports = {mongoURI: "mongodb+srv://leonardo:Bigoleta15@cluster0-5oj7v.mongodb.net/test" }
 
-}else{
+}
+else{
 
-		module.exports = {mongoURI:"mongodb://localhost/blogapp"
-	} 
+	module.exports = {mongoURI: "mongodb+srv://leonardo:Bigoleta15@cluster0-5oj7v.mongodb.net/test" } 
 
 }
