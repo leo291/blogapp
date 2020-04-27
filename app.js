@@ -39,17 +39,7 @@ const db = require("./config/db")
 	app.engine('handlebars', handlebars({defaultlayout: 'main'}))
 	app.set('view engine', 'handlebars')
 	//mongoose
-	
-	mongoose.Promise = global.Promise;
-	 mongoose.connect(db.mongoURI  ,{
-	 useNewUrlParser: true,
-	 useUnifiedTopology: true  
-}).then(() =>	{
-	 	console.log("Mongo conectado com sucesso")
-	 }).catch((err) =>{
-	 	console.log(err)
 
-	 })
 	//Public
 		app.use(express.static(path.join(__dirname,"public")))
 
